@@ -5,12 +5,16 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Xylophone'),
-      ),
+      backgroundColor: Colors.black,
       body: SafeArea(
         child: Container(
+          child: Center(
+            child: Column(
+              children: <Widget>[
 
+              ],
+            ),
+          ),
         ),
       ),
     );
