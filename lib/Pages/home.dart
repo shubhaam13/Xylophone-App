@@ -116,7 +116,41 @@ class HomePage extends StatelessWidget {
                     ),
                   ],
                 ),
-                
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    Container(
+                      child: Container(
+                        width: MediaQuery.of(context).size.width*0.46,
+                        height: MediaQuery.of(context).size.height*0.23,
+                        margin: EdgeInsets.only(top: 8),
+                        child: FlatButton(
+                          child: null,
+                          color: Colors.teal,
+                          onPressed: () {
+                            final player = AudioCache();
+                            player.play('note7.wav');
+                          },
+                        ),
+                      ),
+                    ),
+                    Container(
+                      child: Container(
+                        width: MediaQuery.of(context).size.width*0.46,
+                        height: MediaQuery.of(context).size.height*0.23,
+                        margin: EdgeInsets.only(top: 8),
+                        child: FlatButton(
+                          child: null,
+                          color: Colors.pink,
+                          onPressed: () {
+                            final player = AudioCache();
+                            player.play('note2.wav');
+                          },
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
