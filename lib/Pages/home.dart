@@ -31,8 +31,10 @@ class HomePage extends StatelessWidget {
     Widget xyloButton(Color a, Color b, int notea, int noteb) {
       return Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: <Widget>[xyloSingleButton(a,notea),
-         xyloSingleButton(b,noteb)],
+        children: <Widget>[
+          xyloSingleButton(a, notea),
+          xyloSingleButton(b, noteb)
+        ],
       );
     }
 
@@ -44,10 +46,10 @@ class HomePage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                xyloButton(Colors.purple, Colors.red, 1,2),
-                xyloButton(Colors.green, Colors.blue, 1,2),
-                xyloButton(Colors.yellow, Colors.teal, 5,6),
-                xyloButton(Colors.pink, Colors.orange, 7,2),
+                xyloButton(Colors.purple, Colors.red, 1, 2),
+                xyloButton(Colors.green, Colors.blue, 1, 2),
+                xyloButton(Colors.yellow, Colors.teal, 5, 6),
+                xyloButton(Colors.pink, Colors.orange, 7, 2),
               ],
             ),
           ),
