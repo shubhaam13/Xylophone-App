@@ -2,8 +2,40 @@ import 'package:flutter/material.dart';
 import 'package:audioplayers/audio_cache.dart';
 
 class HomePage extends StatelessWidget {
+  void playNote(int wavnumber) {
+    final player = AudioCache();
+    player.play('note$wavnumber.wav');
+  }
+
   @override
   Widget build(BuildContext context) {
+    Widget xyloSingleButton(Color a, int notea) {
+      return Container(
+        child: Container(
+          width: MediaQuery.of(context).size.width * 0.46,
+          height: MediaQuery.of(context).size.height * 0.23,
+          // margin: EdgeInsets.only(top: 8),
+          child: FlatButton(
+            child: null,
+            color: a,
+            onPressed: () {
+              playNote(notea);
+            },
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+          ),
+        ),
+      );
+    }
+
+    Widget xyloButton(Color a, Color b, int notea, int noteb) {
+      return Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[xyloSingleButton(a,notea),
+         xyloSingleButton(b,noteb)],
+      );
+    }
+
     return Scaffold(
       backgroundColor: Colors.black,
       body: SafeArea(
@@ -12,146 +44,10 @@ class HomePage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    Container(
-                      child: Container(
-                        width: MediaQuery.of(context).size.width * 0.46,
-                        height: MediaQuery.of(context).size.height * 0.23,
-                        // margin: EdgeInsets.only(top: 8),
-                        child: FlatButton(
-                          child: null,
-                          color: Colors.green,
-                          onPressed: () {
-                            final player = AudioCache();
-                            player.play('note1.wav');
-                          },
-                        ),
-                      ),
-                    ),
-                    Container(
-                      child: Container(
-                        width: MediaQuery.of(context).size.width * 0.46,
-                        height: MediaQuery.of(context).size.height * 0.23,
-                        // margin: EdgeInsets.only(top: 8),
-                        child: FlatButton(
-                          child: null,
-                          color: Colors.blue,
-                          onPressed: () {
-                            final player = AudioCache();
-                            player.play('note2.wav');
-                          },
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    Container(
-                      child: Container(
-                        width: MediaQuery.of(context).size.width * 0.46,
-                        height: MediaQuery.of(context).size.height * 0.23,
-                        // margin: EdgeInsets.only(top: 8),
-                        child: FlatButton(
-                          child: null,
-                          color: Colors.red,
-                          onPressed: () {
-                            final player = AudioCache();
-                            player.play('note3.wav');
-                          },
-                        ),
-                      ),
-                    ),
-                    Container(
-                      child: Container(
-                        width: MediaQuery.of(context).size.width * 0.46,
-                        height: MediaQuery.of(context).size.height * 0.23,
-                        // margin: EdgeInsets.only(top: 8),
-                        child: FlatButton(
-                          child: null,
-                          color: Colors.orange,
-                          onPressed: () {
-                            final player = AudioCache();
-                            player.play('note4.wav');
-                          },
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    Container(
-                      child: Container(
-                        width: MediaQuery.of(context).size.width * 0.46,
-                        height: MediaQuery.of(context).size.height * 0.23,
-                        // margin: EdgeInsets.only(top: 8),
-                        child: FlatButton(
-                          child: null,
-                          color: Colors.yellow,
-                          onPressed: () {
-                            final player = AudioCache();
-                            player.play('note5.wav');
-                          },
-                        ),
-                      ),
-                    ),
-                    Container(
-                      child: Container(
-                        width: MediaQuery.of(context).size.width * 0.46,
-                        height: MediaQuery.of(context).size.height * 0.23,
-                        // margin: EdgeInsets.only(top: 8),
-                        child: FlatButton(
-                          child: null,
-                          color: Colors.purple,
-                          onPressed: () {
-                            final player = AudioCache();
-                            player.play('note6.wav');
-                          },
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    Container(
-                      child: Container(
-                        width: MediaQuery.of(context).size.width * 0.46,
-                        height: MediaQuery.of(context).size.height * 0.23,
-                        // margin: EdgeInsets.only(top: 8),
-                        child: FlatButton(
-                          child: null,
-                          color: Colors.teal,
-                          onPressed: () {
-                            final player = AudioCache();
-                            player.play('note7.wav');
-                          },
-                        ),
-                      ),
-                    ),
-                    Container(
-                      child: Container(
-                        width: MediaQuery.of(context).size.width * 0.46,
-                        height: MediaQuery.of(context).size.height * 0.23,
-                        // margin: EdgeInsets.only(top: 8),
-                        child: FlatButton(
-                          child: null,
-                          color: Colors.pink,
-                          onPressed: () {
-                            final player = AudioCache();
-                            player.play('note2.wav');
-                          },
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
+                xyloButton(Colors.purple, Colors.red, 1,2),
+                xyloButton(Colors.green, Colors.blue, 1,2),
+                xyloButton(Colors.yellow, Colors.teal, 5,6),
+                xyloButton(Colors.pink, Colors.orange, 7,2),
               ],
             ),
           ),
