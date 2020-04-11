@@ -10,6 +10,7 @@ class HomePage extends StatelessWidget {
         child: Container(
           child: Center(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -18,7 +19,7 @@ class HomePage extends StatelessWidget {
                       child: Container(
                         width: MediaQuery.of(context).size.width * 0.46,
                         height: MediaQuery.of(context).size.height * 0.23,
-                        margin: EdgeInsets.only(top: 8),
+                        // margin: EdgeInsets.only(top: 8),
                         child: FlatButton(
                           child: null,
                           color: Colors.green,
@@ -33,7 +34,7 @@ class HomePage extends StatelessWidget {
                       child: Container(
                         width: MediaQuery.of(context).size.width * 0.46,
                         height: MediaQuery.of(context).size.height * 0.23,
-                        margin: EdgeInsets.only(top: 8),
+                        // margin: EdgeInsets.only(top: 8),
                         child: FlatButton(
                           child: null,
                           color: Colors.blue,
@@ -53,7 +54,7 @@ class HomePage extends StatelessWidget {
                       child: Container(
                         width: MediaQuery.of(context).size.width * 0.46,
                         height: MediaQuery.of(context).size.height * 0.23,
-                        margin: EdgeInsets.only(top: 8),
+                        // margin: EdgeInsets.only(top: 8),
                         child: FlatButton(
                           child: null,
                           color: Colors.red,
@@ -68,7 +69,7 @@ class HomePage extends StatelessWidget {
                       child: Container(
                         width: MediaQuery.of(context).size.width * 0.46,
                         height: MediaQuery.of(context).size.height * 0.23,
-                        margin: EdgeInsets.only(top: 8),
+                        // margin: EdgeInsets.only(top: 8),
                         child: FlatButton(
                           child: null,
                           color: Colors.orange,
@@ -88,7 +89,7 @@ class HomePage extends StatelessWidget {
                       child: Container(
                         width: MediaQuery.of(context).size.width * 0.46,
                         height: MediaQuery.of(context).size.height * 0.23,
-                        margin: EdgeInsets.only(top: 8),
+                        // margin: EdgeInsets.only(top: 8),
                         child: FlatButton(
                           child: null,
                           color: Colors.yellow,
@@ -103,7 +104,7 @@ class HomePage extends StatelessWidget {
                       child: Container(
                         width: MediaQuery.of(context).size.width * 0.46,
                         height: MediaQuery.of(context).size.height * 0.23,
-                        margin: EdgeInsets.only(top: 8),
+                        // margin: EdgeInsets.only(top: 8),
                         child: FlatButton(
                           child: null,
                           color: Colors.purple,
@@ -123,7 +124,7 @@ class HomePage extends StatelessWidget {
                       child: Container(
                         width: MediaQuery.of(context).size.width * 0.46,
                         height: MediaQuery.of(context).size.height * 0.23,
-                        margin: EdgeInsets.only(top: 8),
+                        // margin: EdgeInsets.only(top: 8),
                         child: FlatButton(
                           child: null,
                           color: Colors.teal,
@@ -138,7 +139,7 @@ class HomePage extends StatelessWidget {
                       child: Container(
                         width: MediaQuery.of(context).size.width * 0.46,
                         height: MediaQuery.of(context).size.height * 0.23,
-                        margin: EdgeInsets.only(top: 8),
+                        // margin: EdgeInsets.only(top: 8),
                         child: FlatButton(
                           child: null,
                           color: Colors.pink,
